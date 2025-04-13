@@ -1,32 +1,29 @@
-# Book QA with RAG, FAISS & Knowledge Graph (Pride and Prejudice)
+# 📚 Book QA using RAG with FAISS & OpenAI
 
-This project is a **Retrieval-Augmented Generation (RAG)** pipeline that allows users to ask questions about a book (default or user-provided), and get answers based on both **semantic chunk retrieval** (via FAISS) and **structured knowledge** (via RDF-based Knowledge Graph using `rdflib`).
+This project implements a **Retrieval-Augmented Generation (RAG)** pipeline for question answering based on any book (in `.txt` format). If the user doesn't provide a file, it defaults to *Pride and Prejudice* by Jane Austen from Project Gutenberg.
 
 ---
 
-##  Features
+## 🚀 Features
 
--  **Question Answering** on a book using OpenAI's GPT-4o-mini.
--  Supports **user-uploaded `.txt` files** or uses *Pride and Prejudice* from Project Gutenberg by default.
--  **Text chunking** with overlapping context using LangChain.
--  **FAISS Vector Store** for semantic similarity-based retrieval.
-- **Knowledge Graph (RDFLib)** for structured relationships between entities (e.g. characters, places).
--  Streamlit-based **UI** to interact with the system in real-time.
--  Caching & persistent vector storage for faster reruns.
+- 🔍 Ask any question about a book.
+- 📂 Upload your own book as a `.txt` file OR use a default book (auto-downloaded).
+- ✂️ Text chunking with overlap using LangChain.
+- 🧠 Embedding generation using SentenceTransformers (`all-MiniLM-L6-v2`).
+- ⚡ Fast semantic search with FAISS.
+- 🤖 Answer generation using OpenAI GPT-4o-mini.
+- 🌐 Intuitive Streamlit web interface.
+- 🧠 FAISS index is saved with the book name for reuse (e.g., `pride_and_prejudice_index.faiss`).
 
 ---
 
 ## 🧱 Tech Stack
 
 - Python
-- [OpenAI GPT-4o-mini](https://platform.openai.com/docs/guides/gpt)
-- [Sentence Transformers (MiniLM)](https://www.sbert.net/)
-- [FAISS](https://github.com/facebookresearch/faiss)
-- [LangChain Text Splitter](https://docs.langchain.com/docs/components/text_splitter/)
-- [RDFLib](https://rdflib.readthedocs.io/)
-- [Streamlit](https://streamlit.io/)
+- Streamlit
+- OpenAI GPT-4o-mini
+- SentenceTransformers
+- FAISS
+- LangChain
 
 ---
-
-## 📂 Folder Structure
-
